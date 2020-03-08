@@ -13,65 +13,103 @@ struct SignInView: View {
     
     @State var email: String = ""
     @State var password: String = ""
-    @State var error: String = ""
-    
+    @State var showAuthView = true
     
     var body: some View {
         
-        
-        VStack {
-            Spacer().frame( height: 150)
-            Image("whatsApp")
-                .resizable()
-                .frame(width: 130, height: 130)
-                .shadow(radius: 2)
-                 
-            VStack(alignment: .leading){
-                Text("Username")
-                    .font(.headline)
-                TextFiledView(email: email)
-                
-            }.padding()
-            VStack(alignment: .leading){
-                Text("Password")
-                    .font(.headline)
-                TextFiledView(email: email)
-                
-            }
-            .padding()
+        NavigationView {
             
-            
-            Button(action: {
-                //
+            if showAuthView{
                 
-              
-            }) {
-                
-                GradientButton(text: "Sign In")
-                
-            }
-            .padding()
-            
-            HStack {
-                
-                Text("don't have an account?")
-                    .font(.caption)
-                Button(action: {
-                    //action
-                }) {
+                VStack {
+                    Spacer().frame( height: 150)
+                    Image("whatsApp")
+                        .resizable()
+                        .frame(width: 130, height: 130)
+                        .shadow(radius: 2)
                     
-                    Text("Register!")
-                        .font(.caption)
-                }
+                    VStack(alignment: .leading){
+                        Text("Email")
+                            .font(.headline)
+                        TextField("Email", text: $email)
+                            .padding().frame(height: 50)
+                            .foregroundColor(.black)
+                            .background(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .foregroundColor(Color.white)
+                                    // Add the outline
+                                    .background(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color(red: 0.07, green: 0.55, blue: 0.49), lineWidth: 3)))
+                            .frame(width: UIScreen.main.bounds.width * 0.8, height: 41)
+                        
+                    }.padding()
+                    
+                    VStack(alignment: .leading){
+                        Text("Password")
+                            .font(.headline)
+                        
+                        SecureField("Password", text: $password)
+                            .padding().frame(height: 50)
+                            .foregroundColor(.black)
+                            .background(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .foregroundColor(Color.white)
+                                    // Add the outline
+                                    .background(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color(red: 0.07, green: 0.55, blue: 0.49), lineWidth: 3)))
+                            .frame(width: UIScreen.main.bounds.width * 0.8, height: 41)
+                        
+                    }
+                    .padding()
+                    
+                    
+                    Button(action: {
+                        //
+                        
+                        Auth.auth().signIn(withEmail: self.email, password: self.password) { (result, error) in
+                            if error != nil {
+                                
+                                print(error?.localizedDescription as Any)
+                                
+                            } else {
+                                
+                                // show
+                                self.showAuthView = false
+                            }
+                        }
+                    }) {
+                        
+                        GradientButton(text: "Sign In")
+                        
+                    }
+                    .padding()
+                    
+                    HStack {
+                        
+                        Text("don't have an account?")
+                            .font(.caption)
+                        Button(action: {
+                            //action
+                        }) {
+                            
+                            Text("Register!")
+                                .font(.caption)
+                        }
+                        
+                    }
+                    Spacer()
+                    
+                } .gesture(TapGesture(count: 1).onEnded({ (_) in
+                    
+                    UIApplication.shared.endEditing()
+                    
+                }))
+                //AUTH VIEW END
+            } else {
                 
+                Text("ddd")
             }
-            Spacer()
-            
-        } .gesture(TapGesture(count: 1).onEnded({ (_) in
-            
-            UIApplication.shared.endEditing()
-           
-        }))
+        }
     }
 }
 

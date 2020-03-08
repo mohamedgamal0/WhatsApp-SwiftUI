@@ -10,13 +10,14 @@
 		E31262738239D5A527B4C28F /* Pods_WhatsApp_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443436BC1219B7320B068962 /* Pods_WhatsApp_SwiftUI.framework */; };
 		ED176F7824151DD300814331 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED176F7724151DD300814331 /* AppDelegate.swift */; };
 		ED176F7A24151DD300814331 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED176F7924151DD300814331 /* SceneDelegate.swift */; };
-		ED176F7C24151DD300814331 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED176F7B24151DD300814331 /* AuthView.swift */; };
 		ED176F7E24151DD300814331 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED176F7D24151DD300814331 /* Assets.xcassets */; };
 		ED176F8124151DD300814331 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED176F8024151DD300814331 /* Preview Assets.xcassets */; };
 		ED176F8424151DD300814331 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED176F8224151DD300814331 /* LaunchScreen.storyboard */; };
 		ED176F8E2415224C00814331 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED176F8D2415224C00814331 /* GoogleService-Info.plist */; };
+		ED2DB34A2415A2F300B206CD /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2DB3492415A2F300B206CD /* UserStore.swift */; };
+		ED2DB34C2415A2FD00B206CD /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2DB34B2415A2FD00B206CD /* UserModel.swift */; };
+		ED2DB34F2415A3C900B206CD /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2DB34E2415A3C900B206CD /* ChatModel.swift */; };
 		ED31F6E5241526A30034F591 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31F6E4241526A30034F591 /* SignInView.swift */; };
-		ED31F6E824152BC70034F591 /* TextFiledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31F6E724152BC70034F591 /* TextFiledView.swift */; };
 		ED31F6EE241540270034F591 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31F6ED241540270034F591 /* GradientButton.swift */; };
 		ED31F6F1241541D20034F591 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31F6F0241541D20034F591 /* RegistrationView.swift */; };
 /* End PBXBuildFile section */
@@ -28,14 +29,15 @@
 		ED176F7424151DD300814331 /* WhatsApp SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WhatsApp SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED176F7724151DD300814331 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED176F7924151DD300814331 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ED176F7B24151DD300814331 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		ED176F7D24151DD300814331 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED176F8024151DD300814331 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ED176F8324151DD300814331 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED176F8524151DD300814331 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED176F8D2415224C00814331 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ED2DB3492415A2F300B206CD /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
+		ED2DB34B2415A2FD00B206CD /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		ED2DB34E2415A3C900B206CD /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		ED31F6E4241526A30034F591 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		ED31F6E724152BC70034F591 /* TextFiledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFiledView.swift; sourceTree = "<group>"; };
 		ED31F6ED241540270034F591 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		ED31F6F0241541D20034F591 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,11 +93,10 @@
 			isa = PBXGroup;
 			children = (
 				ED176F8B2415222000814331 /* Delegates */,
-				ED176F8C2415223000814331 /* AuthView */,
 				ED31F6EF241541C30034F591 /* RegistrationView */,
 				ED31F6E3241526810034F591 /* SighnIn View */,
+				ED2DB34D2415A30300B206CD /* Models */,
 				ED31F6EC241540080034F591 /* Gradient Button */,
-				ED31F6E624152BA00034F591 /* TextFiled */,
 				ED176F7D24151DD300814331 /* Assets.xcassets */,
 				ED176F8224151DD300814331 /* LaunchScreen.storyboard */,
 				ED176F8524151DD300814331 /* Info.plist */,
@@ -122,12 +123,14 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
-		ED176F8C2415223000814331 /* AuthView */ = {
+		ED2DB34D2415A30300B206CD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				ED176F7B24151DD300814331 /* AuthView.swift */,
+				ED2DB3492415A2F300B206CD /* UserStore.swift */,
+				ED2DB34B2415A2FD00B206CD /* UserModel.swift */,
+				ED2DB34E2415A3C900B206CD /* ChatModel.swift */,
 			);
-			path = AuthView;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		ED31F6E3241526810034F591 /* SighnIn View */ = {
@@ -136,14 +139,6 @@
 				ED31F6E4241526A30034F591 /* SignInView.swift */,
 			);
 			path = "SighnIn View";
-			sourceTree = "<group>";
-		};
-		ED31F6E624152BA00034F591 /* TextFiled */ = {
-			isa = PBXGroup;
-			children = (
-				ED31F6E724152BC70034F591 /* TextFiledView.swift */,
-			);
-			path = TextFiled;
 			sourceTree = "<group>";
 		};
 		ED31F6EC241540080034F591 /* Gradient Button */ = {
@@ -279,12 +274,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED176F7824151DD300814331 /* AppDelegate.swift in Sources */,
+				ED2DB34A2415A2F300B206CD /* UserStore.swift in Sources */,
+				ED2DB34C2415A2FD00B206CD /* UserModel.swift in Sources */,
 				ED31F6EE241540270034F591 /* GradientButton.swift in Sources */,
 				ED176F7A24151DD300814331 /* SceneDelegate.swift in Sources */,
 				ED31F6F1241541D20034F591 /* RegistrationView.swift in Sources */,
-				ED176F7C24151DD300814331 /* AuthView.swift in Sources */,
 				ED31F6E5241526A30034F591 /* SignInView.swift in Sources */,
-				ED31F6E824152BC70034F591 /* TextFiledView.swift in Sources */,
+				ED2DB34F2415A3C900B206CD /* ChatModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
