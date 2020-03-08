@@ -3,27 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E31262738239D5A527B4C28F /* Pods_WhatsApp_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443436BC1219B7320B068962 /* Pods_WhatsApp_SwiftUI.framework */; };
 		ED176F7824151DD300814331 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED176F7724151DD300814331 /* AppDelegate.swift */; };
 		ED176F7A24151DD300814331 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED176F7924151DD300814331 /* SceneDelegate.swift */; };
-		ED176F7C24151DD300814331 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED176F7B24151DD300814331 /* ContentView.swift */; };
+		ED176F7C24151DD300814331 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED176F7B24151DD300814331 /* AuthView.swift */; };
 		ED176F7E24151DD300814331 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED176F7D24151DD300814331 /* Assets.xcassets */; };
 		ED176F8124151DD300814331 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED176F8024151DD300814331 /* Preview Assets.xcassets */; };
 		ED176F8424151DD300814331 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED176F8224151DD300814331 /* LaunchScreen.storyboard */; };
+		ED176F8E2415224C00814331 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED176F8D2415224C00814331 /* GoogleService-Info.plist */; };
+		ED31F6E5241526A30034F591 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31F6E4241526A30034F591 /* SignInView.swift */; };
+		ED31F6E824152BC70034F591 /* TextFiledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31F6E724152BC70034F591 /* TextFiledView.swift */; };
+		ED31F6EE241540270034F591 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31F6ED241540270034F591 /* GradientButton.swift */; };
+		ED31F6F1241541D20034F591 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31F6F0241541D20034F591 /* RegistrationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		443436BC1219B7320B068962 /* Pods_WhatsApp_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsApp_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F56F0E1DED6616280BF4991 /* Pods-WhatsApp SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsApp SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-WhatsApp SwiftUI/Pods-WhatsApp SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
+		C37D88771A9FC39DFCBA6089 /* Pods-WhatsApp SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsApp SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-WhatsApp SwiftUI/Pods-WhatsApp SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		ED176F7424151DD300814331 /* WhatsApp SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WhatsApp SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED176F7724151DD300814331 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED176F7924151DD300814331 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ED176F7B24151DD300814331 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ED176F7B24151DD300814331 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		ED176F7D24151DD300814331 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED176F8024151DD300814331 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ED176F8324151DD300814331 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED176F8524151DD300814331 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED176F8D2415224C00814331 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ED31F6E4241526A30034F591 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		ED31F6E724152BC70034F591 /* TextFiledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFiledView.swift; sourceTree = "<group>"; };
+		ED31F6ED241540270034F591 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		ED31F6F0241541D20034F591 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E31262738239D5A527B4C28F /* Pods_WhatsApp_SwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8CD6A593D84DBC50E0096D16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F56F0E1DED6616280BF4991 /* Pods-WhatsApp SwiftUI.debug.xcconfig */,
+				C37D88771A9FC39DFCBA6089 /* Pods-WhatsApp SwiftUI.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C67A0E862C253403CA21AF45 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				443436BC1219B7320B068962 /* Pods_WhatsApp_SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ED176F6B24151DD300814331 = {
 			isa = PBXGroup;
 			children = (
 				ED176F7624151DD300814331 /* WhatsApp SwiftUI */,
 				ED176F7524151DD300814331 /* Products */,
+				8CD6A593D84DBC50E0096D16 /* Pods */,
+				C67A0E862C253403CA21AF45 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +90,16 @@
 		ED176F7624151DD300814331 /* WhatsApp SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				ED176F7724151DD300814331 /* AppDelegate.swift */,
-				ED176F7924151DD300814331 /* SceneDelegate.swift */,
-				ED176F7B24151DD300814331 /* ContentView.swift */,
+				ED176F8B2415222000814331 /* Delegates */,
+				ED176F8C2415223000814331 /* AuthView */,
+				ED31F6EF241541C30034F591 /* RegistrationView */,
+				ED31F6E3241526810034F591 /* SighnIn View */,
+				ED31F6EC241540080034F591 /* Gradient Button */,
+				ED31F6E624152BA00034F591 /* TextFiled */,
 				ED176F7D24151DD300814331 /* Assets.xcassets */,
 				ED176F8224151DD300814331 /* LaunchScreen.storyboard */,
 				ED176F8524151DD300814331 /* Info.plist */,
+				ED176F8D2415224C00814331 /* GoogleService-Info.plist */,
 				ED176F7F24151DD300814331 /* Preview Content */,
 			);
 			path = "WhatsApp SwiftUI";
@@ -75,6 +113,55 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		ED176F8B2415222000814331 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				ED176F7724151DD300814331 /* AppDelegate.swift */,
+				ED176F7924151DD300814331 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		ED176F8C2415223000814331 /* AuthView */ = {
+			isa = PBXGroup;
+			children = (
+				ED176F7B24151DD300814331 /* AuthView.swift */,
+			);
+			path = AuthView;
+			sourceTree = "<group>";
+		};
+		ED31F6E3241526810034F591 /* SighnIn View */ = {
+			isa = PBXGroup;
+			children = (
+				ED31F6E4241526A30034F591 /* SignInView.swift */,
+			);
+			path = "SighnIn View";
+			sourceTree = "<group>";
+		};
+		ED31F6E624152BA00034F591 /* TextFiled */ = {
+			isa = PBXGroup;
+			children = (
+				ED31F6E724152BC70034F591 /* TextFiledView.swift */,
+			);
+			path = TextFiled;
+			sourceTree = "<group>";
+		};
+		ED31F6EC241540080034F591 /* Gradient Button */ = {
+			isa = PBXGroup;
+			children = (
+				ED31F6ED241540270034F591 /* GradientButton.swift */,
+			);
+			path = "Gradient Button";
+			sourceTree = "<group>";
+		};
+		ED31F6EF241541C30034F591 /* RegistrationView */ = {
+			isa = PBXGroup;
+			children = (
+				ED31F6F0241541D20034F591 /* RegistrationView.swift */,
+			);
+			path = RegistrationView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +169,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED176F8824151DD300814331 /* Build configuration list for PBXNativeTarget "WhatsApp SwiftUI" */;
 			buildPhases = (
+				3A5B6794A4205DFFAA36910D /* [CP] Check Pods Manifest.lock */,
 				ED176F7024151DD300814331 /* Sources */,
 				ED176F7124151DD300814331 /* Frameworks */,
 				ED176F7224151DD300814331 /* Resources */,
+				AE2B32DE7C85930A207AE64D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED176F8424151DD300814331 /* LaunchScreen.storyboard in Resources */,
+				ED176F8E2415224C00814331 /* GoogleService-Info.plist in Resources */,
 				ED176F8124151DD300814331 /* Preview Assets.xcassets in Resources */,
 				ED176F7E24151DD300814331 /* Assets.xcassets in Resources */,
 			);
@@ -141,14 +231,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3A5B6794A4205DFFAA36910D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhatsApp SwiftUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE2B32DE7C85930A207AE64D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhatsApp SwiftUI/Pods-WhatsApp SwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhatsApp SwiftUI/Pods-WhatsApp SwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WhatsApp SwiftUI/Pods-WhatsApp SwiftUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ED176F7024151DD300814331 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				ED176F7824151DD300814331 /* AppDelegate.swift in Sources */,
+				ED31F6EE241540270034F591 /* GradientButton.swift in Sources */,
 				ED176F7A24151DD300814331 /* SceneDelegate.swift in Sources */,
-				ED176F7C24151DD300814331 /* ContentView.swift in Sources */,
+				ED31F6F1241541D20034F591 /* RegistrationView.swift in Sources */,
+				ED176F7C24151DD300814331 /* AuthView.swift in Sources */,
+				ED31F6E5241526A30034F591 /* SignInView.swift in Sources */,
+				ED31F6E824152BC70034F591 /* TextFiledView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +418,7 @@
 		};
 		ED176F8924151DD300814331 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F56F0E1DED6616280BF4991 /* Pods-WhatsApp SwiftUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +439,7 @@
 		};
 		ED176F8A24151DD300814331 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C37D88771A9FC39DFCBA6089 /* Pods-WhatsApp SwiftUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
