@@ -15,107 +15,136 @@ struct RegistrationView: View {
     @State var password: String = ""
     @State var name:String = ""
     @State var error: String = ""
-    //    @State var showAlert = true
+    @State var showAuthView = true
     
     var db = Firestore.firestore()
     
     var body: some View {
         
-        VStack {
+        NavigationView {
             
-            Image("whatsApp")
-                .resizable()
-                .frame(width: 130, height: 130)
-                .shadow(radius: 2)
-            
-            VStack(alignment: .leading){
-                Text("User Name")
-                    .font(.headline)
-                TextField("User Name", text: $name)
-                    .padding().frame(height: 50)
-                    .foregroundColor(.black)
-                    .background(
-                        RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(Color.white)
-                            // Add the outline
-                            .background(RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color(red: 0.07, green: 0.55, blue: 0.49), lineWidth: 3)))
-                    .frame(width: UIScreen.main.bounds.width * 0.8, height: 41)
-            }
-            .padding()
-            
-            VStack(alignment: .leading){
-                Text("Email")
-                    .font(.headline)
-                TextField("Email", text: $email)
-                    .padding().frame(height: 50)
-                    .foregroundColor(.black)
-                    .background(
-                        RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(Color.white)
-                            // Add the outline
-                            .background(RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color(red: 0.07, green: 0.55, blue: 0.49), lineWidth: 3)))
-                    .frame(width: UIScreen.main.bounds.width * 0.8, height: 41)
+            if showAuthView{
                 
-            }.padding()
-            
-            VStack(alignment: .leading){
-                Text("Password")
-                    .font(.headline)
-                
-                SecureField("Password", text: $password)
-                    .padding().frame(height: 50)
-                    .foregroundColor(.black)
-                    .background(
-                        RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(Color.white)
-                            // Add the outline
-                            .background(RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color(red: 0.07, green: 0.55, blue: 0.49), lineWidth: 3)))
-                    .frame(width: UIScreen.main.bounds.width * 0.8, height: 41)
-                
-            }
-            .padding()
-            
-            
-            Button(action: {
-                // firbase Auth
-                Auth.auth().createUser(withEmail: self.email, password: self.password) { (result, error) in
+                VStack {
                     
-                    if error != nil {
-                        print(error?.localizedDescription as Any)
-                        //                        self.showAlert = true
-                    } else {
+                    Image("whatsApp")
+                        .resizable()
+                        .frame(width: 130, height: 130)
+                        .shadow(radius: 2)
+                    
+                    VStack(alignment: .leading){
+                        Text("User Name")
+                            .font(.headline)
+                        TextField("User Name", text: $name)
+                            .padding().frame(height: 50)
+                            .foregroundColor(.black)
+                            .background(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .foregroundColor(Color.white)
+                                    // Add the outline
+                                    .background(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color(red: 0.07, green: 0.55, blue: 0.49), lineWidth: 3)))
+                            .frame(width: UIScreen.main.bounds.width * 0.8, height: 41)
+                    }
+                    .padding()
+                    
+                    VStack(alignment: .leading){
+                        Text("Email")
+                            .font(.headline)
+                        TextField("Email", text: $email)
+                            .padding().frame(height: 50)
+                            .foregroundColor(.black)
+                            .background(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .foregroundColor(Color.white)
+                                    // Add the outline
+                                    .background(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color(red: 0.07, green: 0.55, blue: 0.49), lineWidth: 3)))
+                            .frame(width: UIScreen.main.bounds.width * 0.8, height: 41)
                         
-                        var ref:DocumentReference? = nil
-                        let myDectionary : [String:Any] = ["username":self.name,"useremail:":self.email,"useruidfromfirebase":result!.user.uid]
+                    }.padding()
+                    
+                    VStack(alignment: .leading){
+                        Text("Password")
+                            .font(.headline)
                         
-                        ref = self.db.collection("Users").addDocument(data: myDectionary,completion: {(error) in
+                        SecureField("Password", text: $password)
+                            .padding().frame(height: 50)
+                            .foregroundColor(.black)
+                            .background(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .foregroundColor(Color.white)
+                                    // Add the outline
+                                    .background(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color(red: 0.07, green: 0.55, blue: 0.49), lineWidth: 3)))
+                            .frame(width: UIScreen.main.bounds.width * 0.8, height: 41)
+                        
+                    }
+                    .padding()
+                    
+                    
+                    Button(action: {
+                        // firbase Auth
+                        Auth.auth().createUser(withEmail: self.email, password: self.password) { (result, error) in
                             
                             if error != nil {
+                                print(error?.localizedDescription as Any)
+                                //                        self.showAlert = true
+                            } else {
                                 
+                                var ref:DocumentReference? = nil
+                                let myDectionary : [String:Any] = ["username":self.name,"useremail:":self.email,"useruidfromfirebase":result!.user.uid]
+                                
+                                ref = self.db.collection("Users").addDocument(data: myDectionary,completion: {(error) in
+                                    
+                                    if error != nil {
+                                        
+                                    }
+                                    
+                                    
+                                    
+                                })
+                                
+                                //userView
+                                // show
+                                self.showAuthView = false
+
                             }
-                            
-                            
-                            
-                        })
+                        }
                         
-                        //userView
+                    }){
+                        GradientButton(text: "Sign Up")
                     }
-                }
+                    .padding()
+                    
+                    
+                }.gesture(TapGesture(count: 1).onEnded({ (_) in
+                    
+                    UIApplication.shared.endEditing()
+                    
+                }))
                 
-            }){
-                GradientButton(text: "Sign Up")
+                //AUTH VIEW END
+            } else {
+             
+                NavigationView {
+                    UsersListView()
+                
+            }.navigationBarTitle(Text("Chat With Users!"))
+                    .navigationBarItems(leading: Button(action: {
+                        //log out
+                        do {
+                            try Auth.auth().signOut()
+                        } catch {
+                        
+                        }
+                        self.showAuthView = true
+                    }, label: {
+                        Text("Log Out")
+                    }))
             }
-            .padding()
-            
-            
-        }.gesture(TapGesture(count: 1).onEnded({ (_) in
-            
-            UIApplication.shared.endEditing()
-            
-        }))
+        }
+        
     }
 }
 

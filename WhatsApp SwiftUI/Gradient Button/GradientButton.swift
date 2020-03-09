@@ -22,6 +22,8 @@ struct GradientButton: View {
             .foregroundColor(.white)
             .background(LinearGradient(gradient: Gradient(colors: [.init(red: 0.03, green: 0.37, blue: 0.33), .init(red: 0.15, green: 0.83, blue: 0.40)]), startPoint: .leading, endPoint: .trailing))
             .cornerRadius(20)
+            
+
     }
 }
 

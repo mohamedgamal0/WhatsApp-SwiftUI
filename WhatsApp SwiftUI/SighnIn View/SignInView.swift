@@ -88,14 +88,11 @@ struct SignInView: View {
                         
                         Text("don't have an account?")
                             .font(.caption)
-                        Button(action: {
-                            //action
-                        }) {
-                            
-                            Text("Register!")
+                        
+                        NavigationLink(destination: RegistrationView()) {
+                            Text("Sighn Up")
                                 .font(.caption)
                         }
-                        
                     }
                     Spacer()
                     
@@ -104,11 +101,28 @@ struct SignInView: View {
                     UIApplication.shared.endEditing()
                     
                 }))
+                
                 //AUTH VIEW END
             } else {
                 
-                Text("ddd")
+                NavigationView {
+                    UsersListView()
+                    
+                }.navigationBarTitle(Text("Chat With Users!"))
+                    .navigationBarItems(leading: Button(action: {
+                        //log out
+                        do {
+                            try Auth.auth().signOut()
+                        } catch {
+                            
+                        }
+                        self.showAuthView = true
+                    }, label: {
+                        Text("Log Out")
+                    }))
             }
+            
+            
         }
     }
 }
